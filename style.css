@@ -6,8 +6,8 @@
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
-  --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-100: hsl(0 0% 100%);
 
   --ff-primary: 'Be Vietnam Pro', sans-serif;
 
@@ -84,6 +84,7 @@ html,
 body {
   height: 100%;
 }
+
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
@@ -119,14 +120,8 @@ svg {
   }
 }
 
-@media (min-width: 50em) {
-  .display-md-inline-flex {
-    display: inline-flex;
-  }
-}
-
 .container {
-  --max-width: 1100px;
+  --max-width: 1110px;
   --padding: 1rem;
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
@@ -162,7 +157,6 @@ body {
   border: 0;
   border-radius: 100vmax;
   padding: 1.25em 2.5em;
-  padding: 1em 2.5em;
   font-size: var(--fs-button);
   font-weight: var(--fw-bold);
   line-height: 1;
@@ -176,10 +170,9 @@ body {
   color: var(--clr-accent-400);
 }
 
-.button:hover {
-  .button:focus-visible {
-    background-color: var(--clr-accent-300);
-  }
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-accent-300);
 }
 
 .button[data-type='inverted']:hover,
@@ -246,7 +239,7 @@ body {
 
   .nav-list {
     display: grid;
-    gap: var(--size--600);
+    gap: var(--size-600);
     text-align: center;
     font-weight: var(--fw-bold);
   }
@@ -269,13 +262,9 @@ body {
   .mobile-nav-toggle .icon-close {
     display: none;
   }
-
-  .mobile-nav-toggle .bar {
-    display: none;
-  }
 }
 
-/*Utility classes*/
+/* Utility classes */
 
 .visually-hidden {
   position: absolute;
@@ -331,12 +320,12 @@ body {
   font-weight: var(--fw-regular);
 }
 
-.fw-primary-heading {
-  font-size: var(--fw-primary-heading);
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
   line-height: 1.1;
 }
-.fw-secondary-heading {
-  font-size: var(--fw-secondary-heading);
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
   line-height: 1.1;
 }
 
@@ -353,12 +342,11 @@ body {
   font-size: var(--fs-600);
 }
 
-.padding-block-700 {
-  padding-block: var(--size-700);
-}
-
 .padding-block-900 {
   padding-block: var(--size-900);
+}
+.padding-block-700 {
+  padding-block: var(--size-700);
 }
 
 .display-sm-none {
@@ -366,7 +354,7 @@ body {
 }
 
 @media (min-width: 50em) {
-  .diplay-md-inline-flex {
+  .display-md-inline-flex {
     display: inline-flex;
   }
 }
