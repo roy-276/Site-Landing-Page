@@ -291,7 +291,21 @@ p[data-width='wide'] {
   }
 }
 
+/* footer navigation styles */
+
 /* cta styles */
+.footer-nav {
+  columns: 2;
+}
+
+.footer-nav a {
+  color: var(--clr-neutral-400);
+  text-decoration: none;
+}
+
+.footer-nav a:is(:hover, :focus) {
+  color: var(--clr-accent-400);
+}
 
 .cta {
   position: relative;
